@@ -12,8 +12,8 @@ public class App {
         search search = new search();
         
         int choice;
-        
-        System.out.println("1. Add Student");
+        while (true) {
+             System.out.println("1. Add Student");
         System.out.println("2. Remove Student");
         System.out.println("3. View Student");
         System.out.println("4. Search Student");
@@ -36,13 +36,19 @@ public class App {
                 break;
             case 5:
                 System.exit(0);
+                s1.close();
                 break;
         
             default:
             System.out.println("Invalid choice");
                 break;
+
+         
+        }
+
+       
            
         }
- s1.close();
+ 
     }
 }
