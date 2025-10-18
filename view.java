@@ -1,5 +1,4 @@
 public class view {
-
     String studentname;
     String fathername;
     int age;

@@ -2,7 +2,6 @@ import java.util.Scanner;
 public class remove {
     public void display(student s){
  Scanner s1 = new Scanner(System.in);
-   
     
     System.out.print("Enter the student name you want to remove: ");
     String name = s1.nextLine();

@@ -24,6 +24,7 @@ public class add {
             fname = s1.nextLine();
             System.out.print("Enter age: " );
             age = s1.nextInt();
+            s1.nextLine();
             System.out.print("Enter roll no: " );
             rno = s1.nextLine();
             System.out.print("Enter class name: ");
