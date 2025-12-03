@@ -1,31 +1,66 @@
 public class student {
-    String studentname = "laiba noor";
-    String fathername = "Ghulam noor";
-    int age = 19;
-    String rollno = "101";
-    String classname = "BSCS";
-
-    String studentname1 = "mehreen tahir";
-    String fathername1 = "tahir mehmood";
-    int age1 = 21;
-    String rollno1 = "102";
-    String classname1 = "BSCS";
-
-    String studentname2 = "maheen umar";
-    String fathername2 = "Umar farooq";
-    int age2 = 20;
-    String rollno2 = "103";
-    String classname2 = "BSCS";
-
-    String studentname3 = "Ifrah abid";
-    String fathername3 = "Abid hussain";
-    int age3 = 19;
-    String rollno3 = "104";
-    String classname3 = "BSCS";
-
-    String studentname4 = "Khadija Yousuf";
-    String fathername4 = "Yousuf habib";
-    int age4 = 19;
-    String rollno4 = "105";
-    String classname4 = "BSCS";
+    private String name;
+    private String fatherName;
+    private int age;
+    private String className;
+    private String rollNo;
+    
+    // Constructor
+    public student(String name, String fatherName, int age, String className, String rollNo) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.age = age;
+        this.className = className;
+        this.rollNo = rollNo;
+    }
+    
+    // Getters and Setters
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public String getFatherName() {
+        return fatherName;
+    }
+    
+    public void setFatherName(String fatherName) {
+        this.fatherName = fatherName;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
+    public String getClassName() {
+        return className;
+    }
+    
+    public void setClassName(String className) {
+        this.className = className;
+    }
+    
+    public String getRollNo() {
+        return rollNo;
+    }
+    
+    public void setRollNo(String rollNo) {
+        this.rollNo = rollNo;
+    }
+    
+    @Override
+    public String toString() {
+        return "Name: " + name + 
+               ", Father: " + fatherName + 
+               ", Age: " + age + 
+               ", Class: " + className + 
+               ", Roll No: " + rollNo;
+    }
 }

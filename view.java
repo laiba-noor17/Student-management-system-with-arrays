@@ -1,47 +1,27 @@
+import java.util.ArrayList;
+
 public class view {
-    String studentname;
-    String fathername;
-    int age;
-
-    public void display(student s){
-            System.out.println("" );
-            System.out.println("------------------------- " );
-            System.out.println("Student Details");
-            System.out.println("------------------------- ");
-            System.out.println("" );
-            System.out.println("    Student name: "+ s.studentname );
-            System.out.println("    Father name: "+ s.fathername );
-            System.out.println("    Age: " + s.age );
-            System.out.println("    Class name: " + s.classname );
-            System.out.println("    Roll no: " + s.rollno );
-            System.out.println("" );
-
-            System.out.println("    Student name: "+ s.studentname1 );
-            System.out.println("    Father name: "+ s.fathername1 );
-            System.out.println("    Age: " + s.age1 );
-            System.out.println("    Class name: " + s.classname1 );
-            System.out.println("    Roll no: " + s.rollno1 );
-            System.out.println("" );
-            
-            System.out.println("    Student name: "+ s.studentname2 );
-            System.out.println("    Father name: "+ s.fathername2 );
-            System.out.println("    Age: " + s.age2 );
-            System.out.println("    Class name: " + s.classname2 );
-            System.out.println("    Roll no: " + s.rollno2 );
-            System.out.println("" );
-
-            System.out.println("    Student name: "+ s.studentname3 );
-            System.out.println("    Father name: "+ s.fathername3 );
-            System.out.println("    Age: " + s.age3 );
-            System.out.println("    Class name: " + s.classname3 );
-            System.out.println("    Roll no: " + s.rollno3 );
-            System.out.println("" );
-
-            System.out.println("    Student name: "+ s.studentname4 );
-            System.out.println("    Father name: "+ s.fathername4 );
-            System.out.println("    Age: " + s.age4 );
-            System.out.println("    Class name: " + s.classname4 );
-            System.out.println("    Roll no: " + s.rollno4 );
-            System.out.println("" );
+    public void display(StudentManager manager) {
+        System.out.println("\n===== All Students =====");
+        System.out.println("Total Students: " + manager.getCurrentCount());
+        System.out.println("-------------------------");
+        
+        ArrayList<student> allStudents = manager.getAllStudents();
+        
+        if (allStudents.isEmpty()) {
+            System.out.println("No students found!");
+        } else {
+            for (int i = 0; i < allStudents.size(); i++) {
+                student s = allStudents.get(i);
+                System.out.println("Student #" + (i + 1));
+                System.out.println("  Name: " + s.getName());
+                System.out.println("  Father: " + s.getFatherName());
+                System.out.println("  Age: " + s.getAge());
+                System.out.println("  Class: " + s.getClassName());
+                System.out.println("  Roll No: " + s.getRollNo());
+                System.out.println();
+            }
+        }
+        System.out.println("-------------------------");
     }
 }
